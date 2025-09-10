@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang"zh-CN">
+<html lang="zh-CN">
 <head>
-    <meta charset"UTF-8">
-    <meta name"viewport" content"widthdevice-width, initial-scale1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>工资条查询系统 - 工号不存在解决方案</title>
     <style>
         * {
@@ -71,7 +71,7 @@
             font-size: 16px;
         }
         
-        input[type"text"] {
+        input[type="text"] {
             width: 100%;
             padding: 14px;
             border: 2px solid #ddd;
@@ -80,7 +80,7 @@
             transition: all 0.3s;
         }
         
-        input[type"text"]:focus {
+        input[type="text"]:focus {
             border-color: #3498db;
             outline: none;
             box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
@@ -270,47 +270,47 @@
     </style>
 </head>
 <body>
-    <div class"container">
+    <div class="container">
         <header>
             <h1>工资条查询系统</h1>
-            <p class"description">请输入您的工号查询工资信息</p>
+            <p class="description">请输入您的工号查询工资信息</p>
         </header>
         
-        <div class"main-content">
-            <div class"input-section">
-                <div class"form-group">
-                    <label for"employee-id">工号</label>
-                    <input type"text" id"employee-id" placeholder"请输入您的工号">
+        <div class="main-content">
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="employee-id">工号</label>
+                    <input type="text" id="employee-id" placeholder="请输入您的工号">
                 </div>
-                <button id"query-btn">查询工资条</button>
-                <div id"error-message" class"error-message">工号不存在，请重新输入</div>
-                <div id"success-message" class"success-message">查询成功！</div>
+                <button id="query-btn">查询工资条</button>
+                <div id="error-message" class="error-message">工号不存在，请重新输入</div>
+                <div id="success-message" class="success-message">查询成功！</div>
             </div>
             
-            <div class"loading">
-                <div class"loading-spinner"></div>
+            <div class="loading">
+                <div class="loading-spinner"></div>
                 <p>正在查询，请稍候...</p>
             </div>
             
-            <div id"result-section" class"result-section">
-                <h2 class"section-title">工资明细</h2>
+            <div id="result-section" class="result-section">
+                <h2 class="section-title">工资明细</h2>
                 
-                <div class"employee-info">
-                    <div class"info-item">
-                        <strong>姓名：</strong><span id"employee-name"></span>
+                <div class="employee-info">
+                    <div class="info-item">
+                        <strong>姓名：</strong><span id="employee-name"></span>
                     </div>
-                    <div class"info-item">
-                        <strong>部门：</strong><span id"employee-department"></span>
+                    <div class="info-item">
+                        <strong>部门：</strong><span id="employee-department"></span>
                     </div>
-                    <div class"info-item">
-                        <strong>工号：</strong><span id"employee-id-display"></span>
+                    <div class="info-item">
+                        <strong>工号：</strong><span id="employee-id-display"></span>
                     </div>
-                    <div class"info-item">
-                        <strong>发放日期：</strong><span id"salary-date"></span>
+                    <div class="info-item">
+                        <strong>发放日期：</strong><span id="salary-date"></span>
                     </div>
                 </div>
                 
-                <table class"salary-table">
+                <table class="salary-table">
                     <thead>
                         <tr>
                             <th>项目</th>
@@ -318,285 +318,143 @@
                             <th>备注</th>
                         </tr>
                     </thead>
-                    <tbody id"salary-details">
+                    <tbody id="salary-details">
                         <!-- 工资明细将通过JavaScript动态生成 -->
                     </tbody>
                 </table>
                 
-                <div style"margin-top: 20px; text-align: right; font-size: 18px; font-weight: bold;">
-                    实发工资：<span id"total-salary" style"color: #e74c3c;">0.00</span> 元
+                <div style="margin-top: 20px; text-align: right; font-size: 18px; font-weight: bold;">
+                    实发工资：<span id="total-salary" style="color: #e74c3c;">0.00</span> 元
                 </div>
             </div>
             
-            <div class"solution-section">
-                <h2 class"section-title">工号不存在？解决方案</h2>
+            <div class="solution-section">
+                <h2 class="section-title">工号不存在？解决方案</h2>
                 
                 <p>如果您收到"工号不存在"的错误提示，可能是以下原因：</p>
                 
-                <ol class"solution-list">
+                <ol class="solution-list">
                     <li><strong>输入错误</strong>：请检查您输入的工号是否正确，注意区分字母大小写和数字</li>
                     <li><strong>新员工</strong>：如果您是新员工，您的信息可能尚未录入系统</li>
                     <li><strong>系统更新</strong>：工资系统可能正在更新中，请稍后再试</li>
                     <li><strong>权限问题</strong>：您的账户可能没有查询权限</li>
                 </ol>
                 
-                <div class"contact-info">
-                    <p><strong>需要帮助？</strong> 请联系宋罗：</p>
+                <div class="contact-info">
+                    <p><strong>需要帮助？</strong> 请联系人力资源部：</p>
                     <p>电话：<strong>0123-4567890</strong></p>
                     <p>邮箱：<strong>hr@company.com</strong></p>
                     <p>办公时间：周一至周五 9:00-17:30</p>
                 </div>
                 
-                <div style"margin-top: 20px;">
-                    <button onclick"showCommonIds()">查看常见工号格式</button>
-                    <button onclick"clearInput()">清空输入框</button>
+                <div style="margin-top: 20px;">
+                    <button onclick="showCommonIds()">查看常见工号格式</button>
+                    <button onclick="clearInput()">清空输入框</button>
                 </div>
             </div>
         </div>
         
-        <div class"footer">
-            <p>© 2025 掘采三队 - 汽运队 | 少说废话，拉几车矿了？</p>
-            <p>如有疑问，请联系宋罗：hr@example.com</p>
+        <div class="footer">
+            <p>© 2023 公司名称 - 人力资源部 | 系统内置Excel数据，无需上传文件</p>
+            <p>如有疑问，请联系人力资源部：hr@example.com</p>
         </div>
     </div>
 
     <script>
         // 模拟Excel数据 - 根据您提供的工资条样式
-        const excelData  [
-  {
-    "员工编号ເລກບັດ": "姓名 ຊື່ ",
-    "L09553": " 叶倩 "
-  },
-  {
-    "员工编号ເລກບັດ": "岗位ຕຳແໜ່ງ",
-    "L09553": " 综合办事员 "
-  },
-  {
-    "员工编号ເລກບັດ": "入职日期ວັນທີເຂົ້າວຽກ",
-    "L09553": "10/7/23"
-  },
-  {
-    "员工编号ເລກບັດ": "出勤天数ວັນງານ",
-    "L09553": " 30 "
-  },
-  {
-    "员工编号ເລກບັດ": "加班OTຊົ່ວໂມງ",
-    "L09553": " 32 "
-  },
-  {
-    "员工编号ເລກບັດ": "司龄ປີການ",
-    "L09553": "1.9 "
-  },
-  {
-    "员工编号ເລກບັດ": " 基本工资ເງິນເດືອນພື້ນຖານ ",
-    "L09553": " 5,980,000 "
-  },
-  {
-    "员工编号ເລກບັດ": "日常加班工资ເງິນOTມື້",
-    "L09553": " 1,380,000 "
-  },
-  {
-    "员工编号ເລກບັດ": "加班工资ເງິນOTຊົ່ວໂມງ",
-    "L09553": " 1,380,000 "
-  },
-  {
-    "员工编号ເລກບັດ": "司龄津贴ເງິນປີການ",
-    "L09553": " 290,323 "
-  },
-  {
-    "员工编号ເລກບັດ": "汇率津贴ອຸດໜູນເງິນເຟີ້",
-    "L09553": " 483,871 "
-  },
-  {
-    "员工编号ເລກບັດ": "学历津贴ເງິນໃບປະກາດ",
-    "L09553": " 967,742 "
-  },
-  {
-    "员工编号ເລກບັດ": "拉矿津贴ເງິນຖ້ຽວ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": "稳产津贴ເງິນຜະລິດ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": "进尺工资ເງິນເຈາະ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": " 出勤补助ເງິນຂະຫຍັນ ",
-    "L09553": " 800,000.00 "
-  },
-  {
-    "员工编号ເລກບັດ": " 其他收入ເງິນອຸດໜູນອື່ນໆ ",
-    "L09553": " 967,742.00 "
-  },
-  {
-    "员工编号ເລກບັດ": " 代扣款项ເງິນປັບໄໝ ",
-    "L09553": " -   "
-  },
-  {
-    "员工编号ເລກບັດ": " 应发工资\nເງິນກ່ອນຫັກອາກອນ ",
-    "L09553": " 12,249,678.00 "
-  },
-  {
-    "员工编号ເລກບັດ": " 个人所得税ຫັກອາກອນລາຍໄດ້ ",
-    "L09553": " 909,968.00 "
-  },
-  {
-    "员工编号ເລກບັດ": " 实发工资\nເງິນໄດ້ຮັບຕົວຈິງ ",
-    "L09553": " 11,339,710.00 "
-  },
-  {
-    "员工编号ເລກບັດ": "旷工天数(X)",
-    "L09553": " -   "
-  },
-  {
-    "员工编号ເລກບັດ": "员工编号ເລກບັດ",
-    "L09553": "L19764"
-  },
-  {
-    "员工编号ເລກບັດ": "姓名 ຊື່ ",
-    "L09553": " 朱伊洛 "
-  },
-  {
-    "员工编号ເລກບັດ": "岗位ຕຳແໜ່ງ",
-    "L09553": " 综合办事员 "
-  },
-  {
-    "员工编号ເລກບັດ": "入职日期ວັນທີເຂົ້າວຽກ",
-    "L09553": "3/5/25"
-  },
-  {
-    "员工编号ເລກບັດ": "出勤天数ວັນງານ",
-    "L09553": " 31 "
-  },
-  {
-    "员工编号ເລກບັດ": "加班OTຊົ່ວໂມງ",
-    "L09553": " 10 "
-  },
-  {
-    "员工编号ເລກບັດ": "司龄ປີການ",
-    "L09553": "0.5 "
-  },
-  {
-    "员工编号ເລກບັດ": " 基本工资ເງິນເດືອນພື້ນຖານ ",
-    "L09553": " 6,630,000 "
-  },
-  {
-    "员工编号ເລກບັດ": "日常加班工资ເງິນOTມື້",
-    "L09553": " 1,912,500 "
-  },
-  {
-    "员工编号ເລກບັດ": "加班工资ເງິນOTຊົ່ວໂມງ",
-    "L09553": " 478,125 "
-  },
-  {
-    "员工编号ເລກບັດ": "司龄津贴ເງິນປີການ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": "汇率津贴ອຸດໜູນເງິນເຟີ້",
-    "L09553": " 500,000 "
-  },
-  {
-    "员工编号ເລກບັດ": "学历津贴ເງິນໃບປະກາດ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": "拉矿津贴ເງິນຖ້ຽວ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": "稳产津贴ເງິນຜະລິດ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": "进尺工资ເງິນເຈາະ",
-    "L09553": " - "
-  },
-  {
-    "员工编号ເລກບັດ": " 出勤补助ເງິນຂະຫຍັນ ",
-    "L09553": " 800,000.00 "
-  },
-  {
-    "员工编号ເລກບັດ": " 其他收入ເງິນອຸດໜູນອື່ນໆ ",
-    "L09553": " -   "
-  },
-  {
-    "员工编号ເລກບັດ": " 代扣款项ເງິນປັບໄໝ ",
-    "L09553": " -   "
-  },
-  {
-    "员工编号ເລກບັດ": " 应发工资\nເງິນກ່ອນຫັກອາກອນ ",
-    "L09553": " 10,320,625.00 "
-  },
-  {
-    "员工编号ເລກບັດ": " 个人所得税ຫັກອາກອນລາຍໄດ້ ",
-    "L09553": " 717,063.00 "
-  },
-  {
-    "员工编号ເລກບັດ": " 实发工资\nເງິນໄດ້ຮັບຕົວຈິງ ",
-    "L09553": " 9,603,562.00 "
-  },
-  {
-    "员工编号ເລກບັດ": "旷工天数(X)",
-    "L09553": " -   "
-  }
-]
+        const excelData = [
+            {
+                "员工编号": "109553",
+                "姓名": "张三",
+                "部门": "技术部",
+                "发放日期": "2023-10-31",
+                "应发工资": 967742.00,
+                "个人所得税": 122496.78,
+                "日常加班工资": 11339.71,
+                "旷工扣除": 0,
+                "其他扣除": 500.00,
+                "其他收入": 250323.00,
+                "实发工资": 967742.00 - 122496.78 - 500 + 250323 + 11339.71
+            },
+            {
+                "员工编号": "102345",
+                "姓名": "李四",
+                "部门": "市场部",
+                "发放日期": "2023-10-31",
+                "应发工资": 856200.00,
+                "个人所得税": 98500.50,
+                "日常加班工资": 8560.25,
+                "旷工扣除": 0,
+                "其他扣除": 300.00,
+                "其他收入": 185600.00,
+                "实发工资": 856200.00 - 98500.50 - 300 + 185600 + 8560.25
+            },
+            {
+                "员工编号": "107689",
+                "姓名": "王五",
+                "部门": "财务部",
+                "发放日期": "2023-10-31",
+                "应发工资": 923500.00,
+                "个人所得税": 110820.00,
+                "日常加班工资": 10245.75,
+                "旷工扣除": 500.00,
+                "其他扣除": 450.00,
+                "其他收入": 223400.00,
+                "实发工资": 923500.00 - 110820.00 - 500 - 450 + 223400 + 10245.75
+            }
         ];
 
         document.getElementById('query-btn').addEventListener('click', function() {
-            const employeeId  document.getElementById('employee-id').value.trim();
-            const errorMessage  document.getElementById('error-message');
-            const successMessage  document.getElementById('success-message');
-            const resultSection  document.getElementById('result-section');
-            const loading  document.querySelector('.loading');
+            const employeeId = document.getElementById('employee-id').value.trim();
+            const errorMessage = document.getElementById('error-message');
+            const successMessage = document.getElementById('success-message');
+            const resultSection = document.getElementById('result-section');
+            const loading = document.querySelector('.loading');
             
             if (!employeeId) {
-                errorMessage.textContent  "请输入工号";
-                errorMessage.style.display  "block";
-                successMessage.style.display  "none";
-                resultSection.style.display  "none";
+                errorMessage.textContent = "请输入工号";
+                errorMessage.style.display = "block";
+                successMessage.style.display = "none";
+                resultSection.style.display = "none";
                 return;
             }
             
             // 显示加载中
-            loading.style.display  "block";
-            resultSection.style.display  "none";
-            errorMessage.style.display  "none";
-            successMessage.style.display  "none";
+            loading.style.display = "block";
+            resultSection.style.display = "none";
+            errorMessage.style.display = "none";
+            successMessage.style.display = "none";
             
             // 模拟查询延迟
             setTimeout(function() {
-                loading.style.display  "none";
+                loading.style.display = "none";
                 
-                const employeeData  excelData.find(item > item["员工编号"]  employeeId);
+                const employeeData = excelData.find(item => item["员工编号"] === employeeId);
                 
                 if (employeeData) {
-                    errorMessage.style.display  "none";
-                    successMessage.style.display  "block";
+                    errorMessage.style.display = "none";
+                    successMessage.style.display = "block";
                     displaySalaryInfo(employeeData);
-                    resultSection.style.display  "block";
+                    resultSection.style.display = "block";
                 } else {
-                    errorMessage.textContent  "工号不存在，请重新输入";
-                    errorMessage.style.display  "block";
-                    successMessage.style.display  "none";
-                    resultSection.style.display  "none";
+                    errorMessage.textContent = "工号不存在，请重新输入";
+                    errorMessage.style.display = "block";
+                    successMessage.style.display = "none";
+                    resultSection.style.display = "none";
                 }
             }, 1000);
         });
 
         function displaySalaryInfo(data) {
             // 更新员工基本信息
-            document.getElementById('employee-name').textContent  data["姓名"];
-            document.getElementById('employee-department').textContent  data["部门"];
-            document.getElementById('employee-id-display').textContent  data["员工编号"];
-            document.getElementById('salary-date').textContent  data["发放日期"];
+            document.getElementById('employee-name').textContent = data["姓名"];
+            document.getElementById('employee-department').textContent = data["部门"];
+            document.getElementById('employee-id-display').textContent = data["员工编号"];
+            document.getElementById('salary-date').textContent = data["发放日期"];
             
             // 清空之前的工资明细
-            const detailsContainer  document.getElementById('salary-details');
-            detailsContainer.innerHTML  '';
+            const detailsContainer = document.getElementById('salary-details');
+            detailsContainer.innerHTML = '';
             
             // 添加工资明细行
             addSalaryRow(detailsContainer, "应发工资", data["应发工资"], "");
@@ -607,24 +465,24 @@
             addSalaryRow(detailsContainer, "其他收入", data["其他收入"], "额外收入");
             
             // 显示实发工资
-            document.getElementById('total-salary').textContent  data["实发工资"].toFixed(2);
+            document.getElementById('total-salary').textContent = data["实发工资"].toFixed(2);
         }
 
         function addSalaryRow(container, name, amount, note) {
-            const row  document.createElement('tr');
+            const row = document.createElement('tr');
             
             // 项目列
-            const nameCell  document.createElement('td');
-            nameCell.textContent  name;
+            const nameCell = document.createElement('td');
+            nameCell.textContent = name;
             
             // 金额列
-            const amountCell  document.createElement('td');
-            amountCell.textContent  amount > 0 ? `+${amount.toFixed(2)}` : amount.toFixed(2);
-            amountCell.className  amount > 0 ? 'positive-amount' : 'negative-amount';
+            const amountCell = document.createElement('td');
+            amountCell.textContent = amount >= 0 ? `+${amount.toFixed(2)}` : amount.toFixed(2);
+            amountCell.className = amount >= 0 ? 'positive-amount' : 'negative-amount';
             
             // 备注列
-            const noteCell  document.createElement('td');
-            noteCell.textContent  note;
+            const noteCell = document.createElement('td');
+            noteCell.textContent = note;
             
             row.appendChild(nameCell);
             row.appendChild(amountCell);
@@ -638,12 +496,12 @@
         }
 
         function clearInput() {
-            document.getElementById('employee-id').value  '';
+            document.getElementById('employee-id').value = '';
             document.getElementById('employee-id').focus();
         }
 
         // 初始化页面时隐藏加载提示
-        document.querySelector('.loading').style.display  "none";
+        document.querySelector('.loading').style.display = "none";
     </script>
 </body>
 </html>
