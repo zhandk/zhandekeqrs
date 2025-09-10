@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel工资条查询系统 - 掘采三队汽运队专用</title>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <title>工资条查询系统 - 工号不存在解决方案</title>
     <style>
         * {
             margin: 0;
@@ -35,19 +34,6 @@
             color: white;
             padding: 25px 30px;
             text-align: center;
-            position: relative;
-        }
-        
-        .team-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #e74c3c;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
         }
         
         h1 {
@@ -129,6 +115,15 @@
             overflow-x: auto;
         }
         
+        .solution-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #e74c3c;
+        }
+        
         .salary-table {
             width: 100%;
             border-collapse: collapse;
@@ -197,15 +192,6 @@
             border-top: 1px solid #eee;
         }
         
-        .team-notice {
-            background: #fff3cd;
-            color: #856404;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            border-left: 4px solid #ffc107;
-        }
-        
         .employee-info {
             display: flex;
             flex-wrap: wrap;
@@ -223,6 +209,23 @@
             display: inline-block;
             width: 80px;
             color: #2c3e50;
+        }
+        
+        .solution-list {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .solution-list li {
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            background: #e1f5fe;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border-left: 4px solid #0288d1;
         }
         
         @media (max-width: 768px) {
@@ -269,8 +272,7 @@
 <body>
     <div class="container">
         <header>
-            <div class="team-badge">掘采三队-汽运队</div>
-            <h1>Excel工资条查询系统</h1>
+            <h1>工资条查询系统</h1>
             <p class="description">请输入您的工号查询工资信息</p>
         </header>
         
@@ -325,19 +327,43 @@
                     实发工资：<span id="total-salary" style="color: #e74c3c;">0.00</span> 元
                 </div>
             </div>
+            
+            <div class="solution-section">
+                <h2 class="section-title">工号不存在？解决方案</h2>
+                
+                <p>如果您收到"工号不存在"的错误提示，可能是以下原因：</p>
+                
+                <ol class="solution-list">
+                    <li><strong>输入错误</strong>：请检查您输入的工号是否正确，注意区分字母大小写和数字</li>
+                    <li><strong>新员工</strong>：如果您是新员工，您的信息可能尚未录入系统</li>
+                    <li><strong>系统更新</strong>：工资系统可能正在更新中，请稍后再试</li>
+                    <li><strong>权限问题</strong>：您的账户可能没有查询权限</li>
+                </ol>
+                
+                <div class="contact-info">
+                    <p><strong>需要帮助？</strong> 请联系宋罗：</p>
+                    <p>电话：<strong>0123-4567890</strong></p>
+                    <p>邮箱：<strong>hr@company.com</strong></p>
+                    <p>办公时间：周一至周五 9:00-17:30</p>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <button onclick="showCommonIds()">查看常见工号格式</button>
+                    <button onclick="clearInput()">清空输入框</button>
+                </div>
+            </div>
         </div>
         
         <div class="footer">
-            <p>© 2023 掘采三队汽运队 - 人力资源科</p>
-            <p>该网址仅限掘采三队——汽运队使用</p>
-            <div class="team-notice">
-                如有疑问，请联系人力资源科：内线电话 8023
-            </div>
+            <p>© 2025 掘采三队 - 汽运队 | 少说废话，拉几车矿了？</p>
+            <p>如有疑问，请联系宋罗：hr@example.com</p>
         </div>
     </div>
 
     <script>
-        const excelData = ="员工编号ເລກບັດ"	="L09553"
+        // 模拟Excel数据 - 根据您提供的工资条样式
+        const excelData = [
+           ="员工编号ເລກບັດ"	="L09553"
 ="姓名 ຊື່ "	=" 叶倩 "
 ="岗位ຕຳແໜ່ງ"	=" 综合办事员 "
 ="入职日期ວັນທີເຂົ້າວຽກ"	="10/7/23"
@@ -387,6 +413,7 @@
 =" 实发工资
 ເງິນໄດ້ຮັບຕົວຈິງ "	=" 9,603,562.00 "
 ="旷工天数(X)"	=" -   "
+        ];
 
         document.getElementById('query-btn').addEventListener('click', function() {
             const employeeId = document.getElementById('employee-id').value.trim();
@@ -473,6 +500,15 @@
             row.appendChild(noteCell);
             
             container.appendChild(row);
+        }
+
+        function showCommonIds() {
+            alert("常见工号格式：\n\n109553 - 技术部示例\n102345 - 市场部示例\n107689 - 财务部示例\n\n工号通常为6位数字，请咨询部门主管获取您的正确工号");
+        }
+
+        function clearInput() {
+            document.getElementById('employee-id').value = '';
+            document.getElementById('employee-id').focus();
         }
 
         // 初始化页面时隐藏加载提示
